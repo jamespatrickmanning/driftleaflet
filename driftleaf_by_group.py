@@ -486,7 +486,7 @@ for csv in drift_html:
     f.close()
     
 #############################################  Create html for each group  ######################
-    filename_html=csv[:-4]+'.html'
+    filename_html=csv+'.html' # JiM removed the [:-4] from csv
     f2=open(str(filename_html),'w')
     f2.write('''
     <!DOCTYPE html>
@@ -509,7 +509,7 @@ for csv in drift_html:
         <body>
             <div class="container">
                 <div id="header">
-                    <h1><center>'''+csv[7:-10]+'''Drifter tracks</center>  </h1> 
+                    <h1><center>'''+csv[7:-5]+'''Drifter tracks</center>  </h1> 
                 </div>
                 <div id="map" class="map" ></div>
                 <p>
